@@ -83,19 +83,19 @@
               },500);
             }
             animation_loading();
-            if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-              container.className = "unity-mobile";
-              // Avoid draining fillrate performance on mobile devices,
-              // and default/override low DPI mode on mobile browsers.
-              config.devicePixelRatio = 1;
-              mobileWarning.style.display = "block";
-              setTimeout(() => {
-                mobileWarning.style.display = "none";
-              }, 5000);
-            } else {
+            // if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+            //   container.className = "unity-mobile";
+            //   // Avoid draining fillrate performance on mobile devices,
+            //   // and default/override low DPI mode on mobile browsers.
+            //   config.devicePixelRatio = 1;
+            //   mobileWarning.style.display = "block";
+            //   setTimeout(() => {
+            //     mobileWarning.style.display = "none";
+            //   }, 5000);
+            // } else {
               canvas.style.width = "100vw";
               canvas.style.height = "100vh";
-            }
+            // }
             loadingBar.style.display = "block";
             var script = document.createElement("script");
             script.src = loaderUrl;
